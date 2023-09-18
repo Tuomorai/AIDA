@@ -1,0 +1,36 @@
+You will need Python 3.8+ to install Annif.
+The recommended way is to install Annif from PyPI into a virtual environment.
+python3 -m venv annif-venv
+source annif-venv/bin/activate
+pip install annif
+
+
+You will also need NLTK data files:
+python -m nltk.downloader punkt
+
+Test annif version 
+> annif –version
+As a result you should see
+> annif 1.0.0 
+
+load vocab from 
+Download latest models from 
+
+
+Extract these files such that models and vocabs are in data folder
+copy projects.toml 
+sudo apt install libvoikko1 voikko-fi
+
+pip install annif[voikko]
+
+ 
+pip install annif[fasttext]
+ 
+pip install annif[nn]
+
+pip install annif[omikuji]
+
+pip install annif[stwfsa]
+
+Finally 
+annif run
