@@ -13,11 +13,18 @@ Test annif version
 As a result you should see
 > annif 1.0.0 
 
-load vocab from 
-Download latest models from 
+Download  yso-skos.ttl from https://github.com/NatLibFi/Finto-data/tree/master/vocabularies/yso/releases/2023.6.Hypatia
+
+> annif load-vocab /path/to/yso-skos.ttl
+
+
+Download latest models from  https://annif.org/download/models/finto-ai-2023-08/
+
 
 
 Extract these files such that models and vocabs are in data folder
+
+
 copy projects.toml 
 sudo apt install libvoikko1 voikko-fi
 
