@@ -1,9 +1,11 @@
 You will need Python 3.8+ to install Annif 1.0.
 The recommended way is to install Annif from PyPI into a virtual environment.
 This one describes how to install Annif as it is in the arkkiivi backend. 
-python3 -m venv annif-venv
-source annif-venv/bin/activate
-pip install annif
+https://arkkiivi.fi/
+
+>python -m venv annif-venv
+>source annif-venv/bin/activate
+>pip install annif
 
 
 You will also need NLTK data files:
@@ -11,7 +13,7 @@ python -m nltk.downloader punkt
 
 Test annif version 
 > annif –version
-As a result you should see
+As a result
 > annif 1.0.0 
 
 Download  yso-skos.ttl from https://github.com/NatLibFi/Finto-data/tree/master/vocabularies/yso/releases/2023.6.Hypatia
@@ -21,9 +23,13 @@ Download  yso-skos.ttl from https://github.com/NatLibFi/Finto-data/tree/master/v
 
 Download latest models from  https://annif.org/download/models/finto-ai-2023-08/
 
-Extract these files such that models and vocabs are in data folder in your annif-venv
+Extract these files such that models and vocabs are in data folder in your annif-venv root
+Using command 
+>tree -d 
 
-At this point your folder structure looks like
+you have now: 5064 directories
+
+At this point your data folder structure looks like
 
 data
 ├── projects
@@ -43,8 +49,7 @@ data
 │   │   └── vectorizer
 │   ├── yso-bonsai-sv
 │   │   ├── omikuji-model
-│   │   │   ├── settings.json
-│   │   │   ├── tree0.cbor
+│   │   │   ├── settings.js│   │   │   ├── tree0.cbor
 │   │   │   ├── tree1.cbor
 │   │   │   └── tree2.cbor
 │   │   └── vectorizer
