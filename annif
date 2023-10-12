@@ -20,36 +20,107 @@ Download  yso-skos.ttl from https://github.com/NatLibFi/Finto-data/tree/master/v
 
 Download latest models from  https://annif.org/download/models/finto-ai-2023-08/
 
+Extract these files such that models and vocabs are in data folder in your annif-venv
+
+At this point your folder structure looks like
+
+data
+├── projects
+│   ├── yso-bonsai-en
+│   │   ├── omikuji-model
+│   │   │   ├── settings.json
+│   │   │   ├── tree0.cbor
+│   │   │   ├── tree1.cbor
+│   │   │   └── tree2.cbor
+│   │   └── vectorizer
+│   ├── yso-bonsai-fi
+│   │   ├── omikuji-model
+│   │   │   ├── settings.json
+│   │   │   ├── tree0.cbor
+│   │   │   ├── tree1.cbor
+│   │   │   └── tree2.cbor
+│   │   └── vectorizer
+│   ├── yso-bonsai-sv
+│   │   ├── omikuji-model
+│   │   │   ├── settings.json
+│   │   │   ├── tree0.cbor
+│   │   │   ├── tree1.cbor
+│   │   │   └── tree2.cbor
+│   │   └── vectorizer
+│   ├── yso-en
+│   │   └── nn-model.keras
+│   ├── yso-fasttext-en
+│   │   └── fasttext-model
+│   ├── yso-fasttext-fi
+│   │   └── fasttext-model
+│   ├── yso-fasttext-sv
+│   │   └── fasttext-model
+│   ├── yso-fi
+│   │   └── nn-model.keras
+│   ├── yso-mllm-en
+│   │   └── mllm-model.gz
+│   ├── yso-mllm-fi
+│   │   └── mllm-model.gz
+│   ├── yso-mllm-sv
+│   │   └── mllm-model.gz
+│   └── yso-sv
+│       └── nn-model.keras
+└── vocabs
+    └── yso
+        ├── subjects.csv
+        ├── subjects.dump.gz
+        └── subjects.ttl
+
+18 directories, 27 files
 
 
-Extract these files such that models and vocabs are in data folder in annif-venv
-
-
-copy projects.toml to venv-annif
+copy projects.toml to your venv-annif root
 
 Now you can test 
 
-annif list-vocabs
-
 annif show-projects
 
+And as you shuold see
 
+Project ID               Project Name                                 Language  Trained
+---------------------------------------------------------------------------------------
+yso-fi                   YSO suomi (2023.6.Hypatia)                   fi        None   
+yso-sv                   ALLFO svenska (2023.6.Hypatia)               sv        None   
+yso-en                   YSO English (2023.6.Hypatia)                 en        None   
+yso-mllm-fi              YSO MLLM Finnish                             fi        True   
+yso-mllm-en              YSO MLLM English                             en        True   
+yso-mllm-sv              YSO MLLM Swedish                             sv        True   
+yso-bonsai-fi            YSO Omikuji Bonsai Finnish                   fi        None   
+yso-bonsai-sv            YSO Omikuji Bonsai Swedish                   sv        None   
+yso-bonsai-en            YSO Omikuji Bonsai English                   en        None   
+yso-fasttext-fi          YSO fastText Finnish                         fi        None   
+yso-fasttext-sv          YSO fastText Swedish                         sv        None   
+yso-fasttext-en          YSO fastText English                         en        
 Then you need to install additional depencies:
 
-sudo apt install libvoikko1 voikko-fi
+Next
 
-pip install annif[voikko]
+>sudo apt install libvoikko1 voikko-fi
+
+>pip install annif[voikko]
 
  
-pip install annif[fasttext]
+>pip install annif[fasttext]
  
-pip install annif[nn]
+>pip install annif[nn]
 
-pip install annif[omikuji]
+>pip install annif[omikuji]
 
-pip install annif[stwfsa]
+>pip install annif[stwfsa]
 
 Finally 
-annif run
+
+>annif run
+
+And you should see. You are now ready to start and using annif as api.
+
+* Running on http://127.0.0.1:5000
+
+
 
 
