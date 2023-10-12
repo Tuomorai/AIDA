@@ -121,6 +121,42 @@ And you should see.
 
 * Running on http://127.0.0.1:5000
 
+Of course at this point you can use annif from command also
+
+> annif
+Usage: annif [OPTIONS] COMMAND [ARGS]...
+
+Options:
+  -e, --env-file FILE   Load environment variables from this file. python-
+                        dotenv must be installed.
+  -A, --app IMPORT      The Flask application or factory function to load, in
+                        the form 'module:name'. Module can be a dotted import
+                        or file path. Name is not required if it is 'app',
+                        'application', 'create_app', or 'make_app', and can be
+                        'name(args)' to pass arguments.
+  --debug / --no-debug  Set debug mode.
+  --version             Show the version and exit.
+  --help                Show this message and exit.
+
+Commands:
+  clear          Initialize the project to its original, untrained state.
+  completion     Generate the script for tab-key autocompletion for the...
+  eval           Suggest subjects for documents and evaluate the results...
+  hyperopt       Optimize the hyperparameters of a project using...
+  index          Index a directory with documents, suggesting subjects...
+  learn          Further train an existing project on a collection of...
+  list-projects  List available projects.
+  list-vocabs    List available vocabularies.
+  load-vocab     Load a vocabulary from a subject file.
+  optimize       Suggest subjects for documents, testing multiple limits...
+  routes         Show the routes for the app.
+  run            Run a development server.
+  shell          Run a shell in the app context.
+  show-project   Show information about a project.
+  suggest        Suggest subjects for a single document from standard...
+  train          Train a project on a collection of documents.
+
+
 
 
 
