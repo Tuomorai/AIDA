@@ -100,7 +100,9 @@ Then you need to install additional depencies:
 
 Next
 
->sudo apt install libvoikko1 voikko-fi
+https://github.com/NatLibFi/Annif/wiki/Optional-features-and-dependencies
+
+( Try without this first !) >sudo apt install libvoikko1 voikko-fi 
 
 >pip install annif[voikko]
 
@@ -118,10 +120,13 @@ Finally
 >annif run
 
 And you should see.
+* Debug mode: off
+INFO:werkzeug:WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:Press CTRL+C to quit
 
-* Running on http://127.0.0.1:5000
 
-Of course at this point you can use annif from command also
+Of course at this point you can use annif from command line also
 
 > annif
 Usage: annif [OPTIONS] COMMAND [ARGS]...
@@ -156,6 +161,8 @@ Commands:
   suggest        Suggest subjects for a single document from standard...
   train          Train a project on a collection of documents.
 
+
+https://github.com/NatLibFi/Annif/wiki and have fun!
 
 
 
