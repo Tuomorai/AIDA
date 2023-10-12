@@ -78,9 +78,9 @@ copy projects.toml to your venv-annif root
 
 Now you can test 
 
-annif show-projects
+>annif show-projects
 
-And as you shuold see
+
 
 Project ID               Project Name                                 Language  Trained
 ---------------------------------------------------------------------------------------
