@@ -1,5 +1,6 @@
-You will need Python 3.8+ to install Annif.
+You will need Python 3.8+ to install Annif 1.0.
 The recommended way is to install Annif from PyPI into a virtual environment.
+This one describes how to install Annif as it is in the arkkiivi backend. 
 python3 -m venv annif-venv
 source annif-venv/bin/activate
 pip install annif
@@ -74,7 +75,7 @@ data
 18 directories, 27 files
 
 
-copy projects.toml to your venv-annif root
+copy projects.toml to your annif-venv root
 
 Now you can test 
 
@@ -106,7 +107,6 @@ https://github.com/NatLibFi/Annif/wiki/Optional-features-and-dependencies
 
 >pip install annif[voikko]
 
- 
 >pip install annif[fasttext]
  
 >pip install annif[nn]
